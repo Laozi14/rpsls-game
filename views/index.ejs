@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Rock-Paper-Scissors-Lizard-Spock</h1>
+    <p class="subtitle">"An epic battle inspired by <b>Big Bang Theory</b>"</p>
+
+    <!-- Player Name Entry -->
+    <form id="player-form" action="/play" method="POST">
+      <label for="playerName">Enter your name:</label>
+      <input type="text" name="playerName" id="playerName" placeholder="Your Name" required />
+      
+      <!-- Game Options -->
+      <label for="choice">Choose your gesture:</label>
+      <select name="choice" id="choice" required>
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+        <option value="lizard">Lizard</option>
+        <option value="spock">Spock</option>
+      </select>
+      <button type="submit">Play</button>
+    </form>
+    
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <h2>Scoreboard</h2>
+      <ul>
+        <% players.forEach(player => { %>
+          <li><b><%= player.name %></b>: Wins: <%= player.wins %>, Losses: <%= player.losses %>, Ties: <%= player.ties %></li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
