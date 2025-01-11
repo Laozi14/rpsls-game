@@ -3,6 +3,12 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import gameRoutes from './routes/gameRoutes.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+// Example of accessing environment variables
+console.log(process.env.DB_HOST); // Outputs the database host
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
