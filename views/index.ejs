@@ -9,6 +9,8 @@
 <body>
   <div class="container">
     <h1>Rock-Paper-Scissors-Lizard-Spock</h1>
+
+    <!-- Game Form -->
     <form action="/play" method="POST">
       <label for="playerName">Enter your name:</label>
       <input type="text" name="playerName" id="playerName" required />
@@ -22,6 +24,33 @@
       </select>
       <button type="submit">Play</button>
     </form>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% leaderboard.forEach((player, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= player.name %></td>
+              <td><%= player.wins %></td>
+              <td><%= player.losses %></td>
+              <td><%= player.ties %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 </html>
