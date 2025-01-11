@@ -1,10 +1,9 @@
 import pkg from 'pg';
 const { Pool } = pkg;
-
 import dotenv from 'dotenv';
+
 dotenv.config();
 
-// Configure the PostgreSQL connection pool
 const pool = new Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
@@ -13,7 +12,6 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
 });
 
-// Query function for executing SQL commands
 export const query = async (text, params) => {
   const client = await pool.connect();
   try {

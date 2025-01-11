@@ -13,7 +13,6 @@ export const playGame = async (req, res) => {
   const systemChoice = game.getRandomChoice();
   const result = game.determineWinner(playerChoice, systemChoice);
 
-  // Update player stats
   let player = await query('SELECT * FROM players WHERE name = $1', [playerName]);
   if (player.length === 0) {
     await query('INSERT INTO players (name) VALUES ($1)', [playerName]);

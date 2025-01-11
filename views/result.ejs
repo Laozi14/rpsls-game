@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <h1>Game Result</h1>
-  <p>You chose: <%= playerChoice %></p>
-  <p>System chose: <%= systemChoice %></p>
-  <h2>
-    <%= result === 'tie' ? "It's a tie!" : result === 'player' ? 'You win!' : 'System wins!' %>
-  </h2>
-  <a href="/">Play Again</a>
+  <div class="container">
+    <h1>Game Result</h1>
+    <p>You chose: <%= playerChoice %></p>
+    <p>System chose: <%= systemChoice %></p>
+    <h2>
+      <%= result === 'tie' ? "It's a tie!" : result === 'player' ? 'You win!' : 'System wins!' %>
+    </h2>
+    <a href="/">Play Again</a>
+  </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #1f1f1f, #3f3f3f);
     color: white;
     text-align: center;
@@ -11,41 +11,11 @@ body {
     padding: 20px;
   }
   
-  .subtitle {
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  input, select, button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 1em;
-  }
-  
   button {
     background-color: #ff9800;
-    border: none;
     color: white;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  .scoreboard {
-    margin-top: 30px;
-  }
-  
-  .scoreboard ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .scoreboard li {
-    margin: 5px 0;
   }
   

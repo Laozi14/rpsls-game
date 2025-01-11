@@ -9,14 +9,9 @@
 <body>
   <div class="container">
     <h1>Rock-Paper-Scissors-Lizard-Spock</h1>
-    <p class="subtitle">"An epic battle inspired by <b>Big Bang Theory</b>"</p>
-
-    <!-- Player Name Entry -->
-    <form id="player-form" action="/play" method="POST">
+    <form action="/play" method="POST">
       <label for="playerName">Enter your name:</label>
-      <input type="text" name="playerName" id="playerName" placeholder="Your Name" required />
-      
-      <!-- Game Options -->
+      <input type="text" name="playerName" id="playerName" required />
       <label for="choice">Choose your gesture:</label>
       <select name="choice" id="choice" required>
         <option value="rock">Rock</option>
@@ -27,16 +22,6 @@
       </select>
       <button type="submit">Play</button>
     </form>
-    
-    <!-- Scoreboard -->
-    <div class="scoreboard">
-      <h2>Scoreboard</h2>
-      <ul>
-        <% players.forEach(player => { %>
-          <li><b><%= player.name %></b>: Wins: <%= player.wins %>, Losses: <%= player.losses %>, Ties: <%= player.ties %></li>
-        <% }); %>
-      </ul>
-    </div>
   </div>
 </body>
 </html>
